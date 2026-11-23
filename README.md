@@ -1,29 +1,73 @@
-# 🗂️ @robert.tools/sample
+# 🗂️ @robert.tools/molecule-button-link
 
-<description>
+A Component to provide a wrapper between button and link.
 
 ## 📜 Usage
 
 ### 🟢 Installation
 
 ```bash
-npm install @robert.tools/sample
+npm install @robert.tools/molecule-button-link
 ```
+
+#### 🔐 dependencies
+
+- [Component: molecule-link](https://github.com/robert-tools/molecule-link)
+- [Component: atom-button](https://github.com/robert-tools/atom-button)
+- [Filter: safeParam](https://github.com/robert-tools/eleventy-filter-safe-param)
+- [Filter: svg](https://github.com/robert-tools/eleventy-filter-svg)
+- [Filter: merge](https://github.com/robert-tools/eleventy-filter-merge)
 
 ### 📝 Sample usage
 
-```typescript
-import { <name> } from '@robert.tools/sample';
+#### prerequisites
 
-<name>('hello'); // '<name>: hello'
+- define css variables
+
+#### Template
+
+Use the footer component as shown below:
+
+```html
+{{ component("molecule/button-link", {
+    "type": "link",
+    "text": "My Button",
+    "url": "https://example.com",
+    "disabled": false
+}) }}
 ```
 
-## 🗃️ commands
+##### ⚙️ parameter
 
-After an npm install with `npm i` the following commands are available:
+- **class**: CSS class for the link-button
+- **class_modifier**: CSS class modifier for the link-button
+- **url**: URL of the link-button
+- **target**: target attribute of the link-button
+- **disabled**: whether the link-button is disabled
+- **text**: text of the link-button
+- **collapseID**: ID for collapsible content
+- **collapseShow**: whether the collapsible content is shown
+- **type_content**: type of content within the link-button
+- **pre_html**: HTML to be inserted before the link-button
+- **post_html**: HTML to be inserted after the link-button
+- **attributes**: additional attributes for the link-button
 
-* initialize placeholders: `npm run init <semantic>`
-* release a new version: `npm run release <semantic>`
+#### CSS
+
+Use the basic styling
+
+```css
+@import '@robert.tools/molecule-button-link/src/index.css';
+```
+
+#### TypeScript
+
+Include TypeScript by importing the component
+
+```typescript
+import * as MoleculeButtonLink from '@robert.tools/molecule-button-link';
+```
+
 
 ## ⚖️ Notes
 
