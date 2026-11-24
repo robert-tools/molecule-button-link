@@ -1,6 +1,6 @@
 {
     "name": "@robert.tools/molecule-button-link",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A Component to provide a wrapper between button and link.",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
